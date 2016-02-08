@@ -8,8 +8,11 @@ namespace MathLibrary
 {
     public class NumberSequence
     {
-        static List<int> fiboSequence = new List<int>();
-        public static int Fibonacci(int position)
+        static List<long> fiboSequence = new List<long>();
+        static List<long> factorialSequence = new List<long>();
+
+
+        public static long Fibonacci(int position)
         {
             if (fiboSequence.Count <= position)
             {
@@ -35,9 +38,21 @@ namespace MathLibrary
             return 0;
         }
 
-        public static int Factorial(int position)
+        public static long Factorial(int position)
         {
-            return 0;
+            if (factorialSequence.Count <= position)
+            {
+                if (position == 0)
+                {
+                    factorialSequence.Add(1);
+                }
+                else
+                {
+                    factorialSequence.Add(position * Factorial(position - 1));
+                }
+            }
+
+            return factorialSequence[position];
         }
 
         public static int Bell(int position)
