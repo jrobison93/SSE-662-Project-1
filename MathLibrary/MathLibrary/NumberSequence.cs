@@ -8,9 +8,26 @@ namespace MathLibrary
 {
     public class NumberSequence
     {
-        public static uint Fibonacci(uint position)
+        static List<int> fiboSequence = new List<int>();
+        public static int Fibonacci(int position)
         {
-            return 0;
+            if (fiboSequence.Count <= position)
+            {
+                if (position == 0)
+                {
+                    fiboSequence.Add(0);
+                }
+                else if (position == 1)
+                {
+                    fiboSequence.Add(1);
+                }
+                else
+                {
+                    fiboSequence.Add(Fibonacci(position - 1) + Fibonacci(position - 2));
+                }
+            }
+
+            return fiboSequence[position];
         }
 
         public static uint Catalan(uint position)
