@@ -40,14 +40,14 @@ namespace MathLibraryTests
         }
 
         [TestMethod]
-        public void BellTest()
+        public void PadovanTest()
         {
-            Assert.AreEqual(1, NumberSequence.Bell(0));
-            Assert.AreEqual(1, NumberSequence.Bell(1));
-            Assert.AreEqual(2, NumberSequence.Bell(2));
-            Assert.AreEqual(52, NumberSequence.Bell(5));
-            Assert.AreEqual(11597, NumberSequence.Bell(10));
-            Assert.AreEqual(5172415823572, NumberSequence.Bell(20));
+            Assert.AreEqual(1, NumberSequence.Padovan(0));
+            Assert.AreEqual(0, NumberSequence.Padovan(1));
+            Assert.AreEqual(0, NumberSequence.Padovan(2));
+            Assert.AreEqual(1, NumberSequence.Padovan(5));
+            Assert.AreEqual(3, NumberSequence.Padovan(10));
+            Assert.AreEqual(49, NumberSequence.Padovan(20));
         }
     }
 }

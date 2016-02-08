@@ -56,7 +56,7 @@ namespace MathLibrary
             return factorialSequence[position];
         }
 
-        public static int Bell(int position)
+        public static int Padovan(int position)
         {
             return 0;
         }
