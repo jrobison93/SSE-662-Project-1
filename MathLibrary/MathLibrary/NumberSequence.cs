@@ -56,9 +56,20 @@ namespace MathLibrary
             return factorialSequence[position];
         }
 
-        public static int Padovan(int position)
+        public static long Padovan(int position)
         {
-            return 0;
+            if (position == 0)
+            {
+                return 1;
+            }
+            else if (position == 1 || position == 2)
+            {
+                return 0;
+            }
+            else
+            {
+                return (Padovan(position - 2) + Padovan(position - 3));
+            }
         }
     }
 }
