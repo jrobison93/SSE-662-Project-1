@@ -9,7 +9,8 @@ namespace MathLibrary
     public class NumberSequence
     {
         static List<long> fiboSequence = new List<long>();
-        static List<long> factorialSequence = new List<long>();
+        static List<ulong> factorialSequence = new List<ulong>();
+        static List<long> catalanSequence = new List<long>();
 
 
         public static long Fibonacci(int position)
@@ -33,12 +34,12 @@ namespace MathLibrary
             return fiboSequence[position];
         }
 
-        public static int Catalan(int position)
+        public static ulong Catalan(int position)
         {
-            return 0;
+            return (Factorial(position * 2)) / (Factorial(position + 1) * Factorial(position));
         }
 
-        public static long Factorial(int position)
+        public static ulong Factorial(int position)
         {
             if (factorialSequence.Count <= position)
             {
@@ -48,7 +49,7 @@ namespace MathLibrary
                 }
                 else
                 {
-                    factorialSequence.Add(position * Factorial(position - 1));
+                    factorialSequence.Add((ulong)position * Factorial(position - 1));
                 }
             }
 
