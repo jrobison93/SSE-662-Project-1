@@ -30,12 +30,17 @@ namespace MathLibrary
             return fiboSequence[position];
         }
 
-        public static uint Catalan(uint position)
+        public static int Catalan(int position)
         {
             return 0;
         }
 
-        public static uint Bell(uint position)
+        public static int Factorial(int position)
+        {
+            return 0;
+        }
+
+        public static int Bell(int position)
         {
             return 0;
         }

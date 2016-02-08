@@ -30,6 +30,17 @@ namespace MathLibraryTests
         }
 
         [TestMethod]
+        public void Factorial()
+        {
+            Assert.AreEqual(1, NumberSequence.Factorial(0));
+            Assert.AreEqual(1, NumberSequence.Factorial(1));
+            Assert.AreEqual(2, NumberSequence.Factorial(2));
+            Assert.AreEqual(120, NumberSequence.Factorial(5));
+            Assert.AreEqual(3628800, NumberSequence.Factorial(10));
+            Assert.AreEqual(2432902008176640000, NumberSequence.Factorial(20));
+        }
+
+        [TestMethod]
         public void BellTest()
         {
             Assert.AreEqual(1, NumberSequence.Bell(0));
